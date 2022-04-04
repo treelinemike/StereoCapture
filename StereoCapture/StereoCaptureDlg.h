@@ -176,4 +176,5 @@ protected:
 
 public:
 	afx_msg void OnStnClickedPreviewBox();
+	CButton m_stereoCheck;
 };

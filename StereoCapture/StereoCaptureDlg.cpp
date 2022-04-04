@@ -111,6 +111,7 @@ void CStereoCaptureDlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_IMAGE_FRAME_LEFT, m_imgFrameL);
 	DDX_Control(pDX, IDC_IMAGE_FRAME_RIGHT, m_imgFrameR);
 
+	DDX_Control(pDX, IDC_STEREO_CHECK, m_stereoCheck);
 }
 
 BEGIN_MESSAGE_MAP(CStereoCaptureDlg, CDialogEx)
@@ -631,6 +632,16 @@ void CStereoCaptureDlg::RefreshVideoModeList()
 			BOOL		supported;
 
 			// Check that display mode is supported with the active profile
+
+
+			// TODO: change video mode to bmdSupportedVideoModeDualStream3D
+			// first add a stereo checkbox to the UI and read it's status here
+
+
+
+
+
+
 			if ((m_selectedDevice->getDeckLinkInput()->DoesSupportVideoMode(m_selectedInputConnection, deckLinkDisplayMode->GetDisplayMode(), bmdFormatUnspecified,
 				bmdNoVideoInputConversion, bmdSupportedVideoModeDefault, nullptr, &supported) != S_OK) ||
 				!supported)
